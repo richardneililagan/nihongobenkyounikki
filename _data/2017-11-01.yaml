@@ -1,0 +1,29 @@
+grammar:
+  - pattern: '~pattern 1'
+    meaning:
+      - 'grammar meaning 1'
+      - 'grammar meaning 2'
+    sentences:
+      - content: >
+          This is a sentence **pattern**.
+        translated: >
+          This is a **sentence** translation.
+
+kanji:
+  - character: A
+    onyomi:
+      - on1
+      - on2
+    kunyomi:
+      - kun1
+      - kun2
+    meaning:
+      - 'kanji meaning 1'
+      - 'kanji meaning 2'
+    vocab:
+      - text: 'vocab1'
+        kana: 'kana'
+        type: 'verb'
+        meaning:
+          - 'vocab meaning 1'
+          - 'vocab meaning 2'

@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+
+{% if page.full_title %}
+<title>{{ page.full_title }}</title>
+{% elsif page.title %}
+<title>{{ page.title }}</title>
+{% else %}
+<title>{{ site.title }}</title>
+{% endif %}
+
+{% if page.description %}
+<meta content="{{ page.description }}" name="description">
+{% endif %}
+
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+

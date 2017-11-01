@@ -1,1 +1,8 @@
-theme: jekyll-theme-cayman
+# Site information
+title: 日本語勉強日記
+
+# Defaults
+defaults:
+  -
+    values:
+      layout: 'article'

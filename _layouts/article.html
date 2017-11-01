@@ -1,0 +1,12 @@
+---
+type: article
+---
+
+{% capture data_id %}{{ page.date | date: "%Y-%m-%d" }}{% endcapture %}
+{% assign manifest = site.data[data_id] %}
+
+{% include head.html %}
+
+{% include post.html post=page content=content manifest=manifest %}
+
+{% include end.html %}
