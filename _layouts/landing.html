@@ -1,8 +1,25 @@
 {% include head.html %}
 
+{% include site-header.html %}
+
 {% if site.posts[0] %}
   {% assign post = site.posts[0] %}
   {% include post.html post=post content=post.content %}
+{% endif %}
+
+{% if site.posts %}
+<section id='toc' class='posts-list'>
+  <ul class='toc-list'>
+    {% for post in site.posts %}
+    <li class='toc-list-item'>
+      <a href='{{ base }}{{ post.url | replace: ".html", "" }}'>
+        <span class='date'>{{ post.date | date_to_string }}</span>
+        <span class='title'>{{ post.title }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 {% endif %}
 
 {% include end.html %}

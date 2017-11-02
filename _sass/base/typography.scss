@@ -1,0 +1,11 @@
+$general-typeface: 'Noto Sans Japanese';
+$heading-typeface: 'Mplus 1p';
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: $general-typeface;
+}
+

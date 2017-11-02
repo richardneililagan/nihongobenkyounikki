@@ -1,0 +1,21 @@
+.site-header {
+  padding-right: 20%;
+  margin-bottom: $pad * 2;
+
+  font-family: $heading-typeface;
+
+  & > .headertext {
+    font-weight: 600;
+    font-size: 36px;
+
+    margin: 0;
+  }
+
+  & .headersubtext {
+    display: block;
+    font-weight: 100;
+    font-size: .6em;
+
+    margin: $pad 0;
+  }
+}

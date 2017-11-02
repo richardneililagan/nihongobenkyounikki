@@ -1,5 +1,9 @@
 # Site information
 title: 日本語勉強日記
+description: 'A diary of review points and lessons on the Japanese language.'
+
+include: ['./_sass/base', './_sass/components']
+exclude: ['README.md']
 
 # Defaults
 defaults:

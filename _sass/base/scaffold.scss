@@ -1,0 +1,10 @@
+$pad: 16px;
+
+body {
+  padding: $pad;
+
+  display: flex;
+  flex-direction: column;
+
+  background: $whitewash;
+}
