@@ -1,0 +1,16 @@
+.article-entry {
+  padding: 0 $pad;
+
+  .posttitle {
+    font-family: $heading-typeface;
+    font-weight: 900;
+  }
+
+  .content {
+    color: rgba($black, 0.54);
+  }
+
+  .date {
+    font-size: 12px;
+  }
+}

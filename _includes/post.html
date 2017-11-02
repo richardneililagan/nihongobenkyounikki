@@ -1,15 +1,17 @@
 <article class='article-entry'>
 
-  {% if manifest.grammar %}
-  <section class='grammar'>
-    grammar section
-  </section>
-  {% endif %}
+  {% assign post=include.post %}
+
+  <span class='date pill'>{{ post.date | date_to_string }}</span>
+  <h1 class='posttitle'>{{ post.title }}</h1>
+  <div class='content'>{{ post.content }}</div>
 
   {% if manifest.kanji %}
-  <section class='kanji'>
-    kanji section
-  </section>
+    {% include kanji-list.html items=manifest.kanji %}
+  {% endif %}
+
+  {% if manifest.grammar %}
+    {% include grammar-list.html items=manifest.grammar %}
   {% endif %}
 
 </article>

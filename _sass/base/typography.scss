@@ -9,3 +9,13 @@ $heading-typeface: 'Mplus 1p';
   font-family: $general-typeface;
 }
 
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: $black;
+}
+
+.kanji-glyph {
+  font-family: $heading-typeface;
+}

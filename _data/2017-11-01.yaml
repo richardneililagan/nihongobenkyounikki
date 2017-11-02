@@ -1,5 +1,7 @@
 grammar:
-  - pattern: '~pattern 1'
+  - pattern: 'A *とともに* ～'
+  - pattern: 'A *とともに* ～'
+  - pattern: 'A *とともに* ～'
     meaning:
       - 'grammar meaning 1'
       - 'grammar meaning 2'
@@ -10,20 +12,32 @@ grammar:
           This is a **sentence** translation.
 
 kanji:
-  - character: A
+  - character: '数'
+    level: 'N3'
     onyomi:
-      - on1
-      - on2
+      - 'スウ'
+      - 'ス'
     kunyomi:
-      - kun1
-      - kun2
+      - '*かず*'
+      - '*かぞ*える'
     meaning:
-      - 'kanji meaning 1'
-      - 'kanji meaning 2'
+      - '**number**'
+      - 'strength'
+      - 'fate'
+      - 'law'
+      - 'figures'
     vocab:
-      - text: 'vocab1'
-        kana: 'kana'
-        type: 'verb'
-        meaning:
-          - 'vocab meaning 1'
-          - 'vocab meaning 2'
+      - text: '**数**'
+        level: 'N3'
+        kana: 'すう'
+        definitions:
+          - type: 'prefix'
+            dt: 'several'
+          - type: 'noun'
+            dt: 'number, numeral'
+    comment: |
+      Spicy jalapeno bacon ipsum dolor amet beef alcatra landjaeger capicola strip steak fatback pork belly ball tip ribeye ham pork meatball pig doner drumstick. Turkey ham hock bacon brisket. Chicken kielbasa pastrami pancetta strip steak pork loin filet mignon alcatra ground round bresaola ham. Meatball pastrami boudin picanha prosciutto.
+
+      Ribeye chuck tri-tip turducken. Tail kevin rump ribeye cow pig fatback pancetta jowl picanha boudin beef ribs tri-tip short loin sirloin. Tri-tip venison pig jowl ham brisket. Tongue kevin ham hock turducken capicola burgdoggen strip steak flank rump frankfurter doner. Rump pork pork belly shankle, corned beef pork loin beef kevin.
+
+  - character: '数'

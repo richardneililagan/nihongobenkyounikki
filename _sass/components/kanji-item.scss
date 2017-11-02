@@ -1,0 +1,76 @@
+.kanji-item {
+  margin-bottom: $pad;
+
+  & .character {
+    font-family: $heading-typeface;
+    font-size: 48px;
+  }
+
+  & .details {
+    margin-left: $pad;
+    flex-grow: 1;
+  }
+
+  & .core {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: $pad;
+  }
+
+  & .comment {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba($black, 0.87);
+  }
+
+  & .corerow .pill {
+    font-size: 12px;
+    background: $dark-bg;
+
+    padding: .2em .4em;
+    border: 1px solid $dark-bg;
+    color: $dark-bg;
+    background: transparent;
+  }
+
+  & .corerow .kanjilevel {
+    background: $accent;
+    border: 0;
+    color: white;
+  }
+
+  & .corerow .reading {
+    font-size: 14px;
+    font-weight: 600;
+
+    &.-kunyomi {
+      color: rgba($black, 0.54);
+    }
+
+    &.-kunyomi em,
+    &.-kunyomi strong {
+      color: $black;
+      font-style: normal;
+    }
+
+    &.-meaning {
+      font-weight: 400;
+      color: rgba($black, 0.54);
+    }
+
+    &.-meaning em,
+    &.-meaning strong {
+      font-style: normal;
+      font-weight: 600;
+      color: $black;
+    }
+
+    &::after {
+      content: ', '
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}

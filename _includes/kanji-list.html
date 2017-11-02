@@ -1,0 +1,10 @@
+<section class='kanji-list section-group'>
+  <header>
+    <h3 class="sectiontitle">漢字</h3>
+  </header>
+
+  {% for kanji in include.items %}
+    {% include kanji-item.html item=kanji %}
+  {% endfor %}
+
+</section>

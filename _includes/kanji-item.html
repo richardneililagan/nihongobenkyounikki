@@ -1,0 +1,37 @@
+{% assign kanji = include.item %}
+
+<div class='kanji-item'>
+
+  <section class='core'>
+    <div class='character'>{{ kanji.character }}</div>
+    <div class='details'>
+      {% comment %} -- core details -- {% endcomment %}
+      <div class='corerow'>
+        <span class='pill kanjilevel'>{{ kanji.level }}</span>
+      </div>
+      <div class='corerow'>
+        <span class='pill onyomi'>音読み</span>
+        {% for onyomi in kanji.onyomi %}
+        <span class='reading -onyomi'>{{ onyomi }}</span>
+        {% endfor %}
+      </div>
+      <div class='corerow'>
+        <span class='pill kunyomi'>訓読み</span>
+        {% for kunyomi in kanji.kunyomi %}
+        <span class='reading -kunyomi'>{{ kunyomi | markdownify | remove: '<p>' | remove: '</p>' | rstrip }}</span>
+        {% endfor %}
+      </div>
+      <div class='corerow'>
+        <span class='pill meaning'>意味</span>
+        {% for meaning in kanji.meaning %}
+        <span class='reading -meaning'>{{ meaning | markdownify | remove: '<p>' | remove: '</p>' | rstrip }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class='comment'>
+  {{ kanji.comment | markdownify }}
+  </section>
+
+</div>

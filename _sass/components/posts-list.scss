@@ -1,3 +1,78 @@
 .posts-list {
-  background: $bg;
+  padding: 0 $pad;
+
+  & .toc-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  & .toc-list .pill {
+    font-size: 12px;
+  }
+
+  & .content {
+    color: rgba($black, .54);
+  }
+
+  & .section-title {
+    font-weight: 100;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    color: $accent;
+
+    &::after {
+      height: 1px;
+      margin-left: $pad / 2;
+      content: ' ';
+      display: inline-block;
+      background: rgba($accent, 0.54);
+
+      flex-grow: 1;
+    }
+  }
+
+  & .kanji-list {
+    // padding-right: 20%;
+  }
+
+  & .kanji-glyph {
+    width: 1.5em;
+    height: 1.5em;
+    margin-bottom: $pad / 4;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: $dark-bg;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba($black, .12);
+    border-radius: 50%;
+
+    background: white;
+  }
+
+  & .grammar-item {
+    padding: .2em .6em;
+    margin-bottom: $pad / 4;
+    border: 1px solid rgba($black, .12);
+    background: $dark-bg;
+
+    font-size: 20px;
+    font-family: $heading-typeface;
+    color: rgba(white, 0.7);
+    letter-spacing: -2px;
+
+    display: inline-block;
+
+    & em {
+      font-weight: 600;
+      font-style: normal;
+      color: $glyph-accent;
+    }
+  }
 }

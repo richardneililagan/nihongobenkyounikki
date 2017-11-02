@@ -1,21 +1,28 @@
 .site-header {
-  padding-right: 20%;
-  margin-bottom: $pad * 2;
+  padding: $pad;
+  background: $black;
+  color: white;
+  margin-bottom: $pad;
 
   font-family: $heading-typeface;
+  font-size: 40px;
+
+  border-bottom: 6px solid $accent;
 
   & > .headertext {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 30;
 
     margin: 0;
   }
 
   & .headersubtext {
+    margin: $pad 0;
+    padding-right: 30%;
+
     display: block;
     font-weight: 100;
-    font-size: .6em;
-
-    margin: $pad 0;
+    font-size: 16px;
+    color: rgba(white, 0.7);
   }
 }

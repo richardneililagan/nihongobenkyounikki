@@ -2,19 +2,49 @@
 
 {% include site-header.html %}
 
-{% if site.posts[0] %}
+{% comment %} {% if site.posts[0] %}
   {% assign post = site.posts[0] %}
   {% include post.html post=post content=post.content %}
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% if site.posts %}
 <section id='toc' class='posts-list'>
   <ul class='toc-list'>
     {% for post in site.posts %}
-    <li class='toc-list-item'>
-      <a href='{{ base }}{{ post.url | replace: ".html", "" }}'>
-        <span class='date'>{{ post.date | date_to_string }}</span>
-        <span class='title'>{{ post.title }}</span>
+    {% capture data_id %}{{ post.date | date: "%Y-%m-%d" }}{% endcapture %}
+    {% assign manifest = site.data[data_id] %}
+    <li>
+      <a class='toc-list-item' href='{{ base }}{{ post.url | replace: ".html", "" }}'>
+        <span class='date pill'>{{ post.date | date_to_string }}</span>
+        <h2>{{ post.title }}</h2>
+        <div class='content'>{{ post.excerpt }}</div>
+
+        {% if manifest.kanji %}
+        <div class='kanji-list'>
+          <header>
+            <h3 class="section-title">漢字</h3>
+          </header>
+
+          {% for kanji in manifest.kanji %}
+          <span class='kanji-glyph'>{{ kanji.character }}</span>
+          {% endfor %}
+
+        </div>
+        {% endif %}
+
+        {% if manifest.grammar %}
+        <div class='grammar-list'>
+          <header>
+            <h3 class="section-title">文法</h3>
+
+            {% for item in manifest.grammar %}
+            <span class='grammar-item'>
+            {{ item.pattern | markdownify | remove: '<p>' | remove: '</p>' }}
+            </span>
+            {% endfor %}
+          </header>
+        </div>
+        {% endif %}
       </a>
     </li>
     {% endfor %}
